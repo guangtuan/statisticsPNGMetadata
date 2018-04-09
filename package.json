@@ -1,0 +1,15 @@
+{
+  "name": "statistics-png-meta-data",
+  "version": "1.0.0",
+  "description": "statistics metadata of png files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "guangtuan.zhuang",
+  "license": "ISC",
+  "dependencies": {
+    "png-metadata": "^1.0.1",
+    "walk": "^2.3.13"
+  }
+}
