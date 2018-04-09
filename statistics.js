@@ -7,7 +7,7 @@ const tools = {
 tools.arrayEqual = (arr1, arr2) => tools.connect(arr1) === tools.connect(arr2);
 
 const png = require('png-metadata');
-const readMetadata = path => png.splitChunk(png.readFileSync(path)).map(tools.getProp('type'))
+const readMetadata = path => png.splitChunk(png.readFileSync(path)).map(tools.getProp('type'));
 
 let matches = metadataNames => ele => tools.arrayEqual(ele.metadataNames, metadataNames);
 
