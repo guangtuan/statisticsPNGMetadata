@@ -4,12 +4,14 @@ const path = require('path');
 module.exports = root => new Promise((resolve, reject) => {
     const walker = walk.walk(root, { followLinks: false });
     let files = [];
+    let imageFeature = fileName => fileName.match(/.(png)$/i);
     walker.on('file', (root, stat, next) => {
-        files.push(path.join(root, stat.name));
+        if (imageFeature(stat.name)) {
+            files.push(path.join(root, stat.name));
+        }
         next();
     });
     walker.on('end', () => {
-        let imageFeature = fileName => fileName.match(/.(png)$/i);
-        resolve(files.filter(imageFeature));
+        resolve(files);
     });
 });

@@ -1,14 +1,21 @@
+分析某个文件夹下 png 文件的 metadata，起初目的是
+- 项目采用 tinypng 压缩 png 文件，但是不知道哪一些被遗漏了。
+- tinypng 压缩会对 metadata 做处理，所以 metadata 可以看做一个特征，由此分析哪些文件已经被遗漏。
+
 ### usage
 
 ```bash
-node index.js path/to/pngFilesFolder
+git clone https://github.com/guangtuan/statisticsPNGMetadata.git
+cd statisticsPNGMetadata
+npm install
+npm start path/to/pngFilesFolder
 ```
 
 ### demo
 
 #### input
 ```bash
-$ node index 'E:\workspace\nodejs\testFolder'
+npm start 'E:\workspace\nodejs\testFolder'
 ```
 
 #### output
@@ -68,5 +75,4 @@ $ node index 'E:\workspace\nodejs\testFolder'
         ]
     }
 ]
-
 ```
